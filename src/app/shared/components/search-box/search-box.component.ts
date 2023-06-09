@@ -30,9 +30,9 @@ export class SearchBoxComponent implements OnInit, OnDestroy {
       });
     }
 
-    ngOnDestroy(): void {
-      this.debouncerSubscription?.unsubscribe();
-    }
+  ngOnDestroy(): void {
+    this.debouncerSubscription?.unsubscribe();
+  }
 
   public emitValue(value:string): void {
     this.onValue.emit(value);
